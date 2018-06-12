@@ -1,0 +1,39 @@
+<html>
+<head>
+    <script src="chart.js"></script>
+    <script src="data.js"></script>
+    
+</head>
+
+<body>
+Welcome to the test zone
+
+<canvas id="bar-chart" width="800" height="450"></canvas>
+
+<script>
+// Bar chart
+new Chart(document.getElementById("bar-chart"), {
+    type: 'line',
+    data: {
+      labels: date,
+      datasets: [
+        {
+          label: "Arbitrage values",
+          backgroundColor: ["#8e5ea2", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: arbData
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Max arbitrage value found by the Arrrbitrage in the last 50 minutes (no fees included)'
+      }
+    }
+});
+</script>
+    
+    
+ <a href="https://contrarian.netlify.com/">Back to Contrarian</a>
+    </body>
