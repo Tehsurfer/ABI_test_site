@@ -11,6 +11,8 @@ Welcome to the test zone
 <canvas id="bar-chart" width="800" height="450"></canvas>
 
 <script>
+Chart.defaults.global.elements.point.radius = .5    
+    
 // Bar chart
 new Chart(document.getElementById("bar-chart"), {
     type: 'line',
